@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoDefer Dashboard // The Shift Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow"></div>
+
+    <div id="app">
+        <!-- Section A: Navbar -->
+        <nav class="navbar fade-in">
+            <a href="index.html" class="logo">ECODEFER</a>
+            <div class="nav-right">
+                <div class="clock" id="live-clock">--:--:--</div>
+                <div class="grid-status">
+                    <div class="pulsing-dot"></div>
+                    GRID: ONLINE
+                </div>
+            </div>
+        </nav>
+
+        <!-- Section C: Simulator -->
+        <section id="simulator-section" class="simulator-wrapper fade-in fade-delay-1">
+            <div class="glass-card">
+                <h2>The Shift Simulator</h2>
+                <div class="form-group">
+                    <label>Select Task Type</label>
+                    <select id="task-select">
+                        <option value="4.2">Train PyTorch ResNet-50 Model (Estimated: 4.2 kWh)</option>
+                        <option value="12.8">AWS S3 Weekly Data Migration (Estimated: 12.8 kWh)</option>
+                        <option value="0.8">Node.js Enterprise App Build (Estimated: 0.8 kWh)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Select Server Region</label>
+                    <select id="region-select">
+                        <option value="us-east">US-East (Virginia)</option>
+                        <option value="eu-central">EU-Central (Frankfurt)</option>
+                        <option value="ap-south">AP-South (Mumbai)</option>
+                    </select>
+                </div>
+                <button id="btn-calculate" class="btn action-btn">CALCULATE GREEN-SHIFT</button>
+                
+                <div id="output-box" class="output-box hidden">
+                    <div class="stat-row">
+                        <span class="label">Current Grid Status:</span>
+                        <span class="value dirty">DIRTY (68% Coal / 32% Gas)</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="label">Immediate Execution:</span>
+                        <span class="value" id="imm-exec">3.42 kg CO2 generated.</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="label">Suggested Shift:</span>
+                        <span class="value green">Defer to 02:15 AM (84% Wind/Solar Grid).</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="label">Deferred Execution:</span>
+                        <span class="value" id="def-exec">0.61 kg CO2 generated.</span>
+                    </div>
+                    <div class="stat-row highlight">
+                        <span class="label">NET SAVINGS:</span>
+                        <span class="value super-green">82% reduction in Carbon Footprint.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="fade-in fade-delay-2">
+            <p>This dashboard is rendered in True-Black to reduce OLED monitor power consumption by 18%.</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

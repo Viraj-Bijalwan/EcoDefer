@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoDefer // Green Compute Scheduling</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+
+    <div id="app">
+        <!-- Section A: Navbar -->
+        <nav class="navbar fade-in">
+            <a href="index.html" class="logo">ECODEFER</a>
+            <div class="nav-right">
+                <div class="clock" id="live-clock">--:--:--</div>
+                <div class="grid-status">
+                    <div class="pulsing-dot"></div>
+                    GRID: ONLINE
+                </div>
+            </div>
+        </nav>
+
+        <!-- Section B: Hero -->
+        <header class="hero">
+            <div class="hero-brand fade-in">ECODEFER</div>
+            <h1 class="fade-in fade-delay-1">Stop burning coal to compile your code.</h1>
+            <p class="sub-headline fade-in fade-delay-2">
+                EcoDefer automatically intercepts heavy developer tasks (CI/CD pipelines, AI training, batch backups) and holds them until your local power grid is running on green energy.
+            </p>
+            <div class="hero-buttons fade-in fade-delay-3">
+                <a href="dashboard.html" class="btn primary">Launch Dashboard</a>
+                <button id="btn-install" class="btn terminal">
+                    <span class="prompt">$</span> npm install -g ecodefer
+                    <svg class="copy-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Project Details / Features -->
+        <section class="features fade-in fade-delay-4">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <h3>Cost Efficiency</h3>
+                <p>Cut cloud computing costs by taking advantage of off-peak, green energy pricing automatically.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                <h3>Grid Intelligence</h3>
+                <p>Seamlessly integrates with your local energy grid APIs to detect the highest ratios of wind and solar power.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
+                <h3>DevOps Ready</h3>
+                <p>Deploy as a GitHub Action, AWS Plugin, or local CLI tool. It just works with your existing pipelines.</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="fade-in fade-delay-4">
+            <p>This dashboard is rendered in True-Black to reduce OLED monitor power consumption by 18%.</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
